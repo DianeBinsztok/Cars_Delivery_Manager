@@ -7,11 +7,345 @@ export default function Home() {
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-center py-32 px-16 bg-white dark:bg-black sm:items-start">
         {/* I - PLANNING DU JOUR */}
         <section>
-          <h2>Planning du jour</h2>
+            <h2>Livraisons du jour</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Heure</th>
+                        <th>Client</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>9:00</th>
+                        <th>ENM</th>
+                        <th>Livraison de 1 Peugeot 2008</th>
+                    </tr>
+                    <tr>
+                        <th>11:00</th>
+                        <th>Régie de l'Eau</th>
+                        <th>Livraison de 5 Peugeot 208</th>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         {/* II - VEHICULES */}
         <section>
-          <h2>Véhicules</h2>
+          <h2>Commandes</h2>
+            {/* VÉHICULES LIVRABLES */}
+            <section id="ongoing"> 
+                <section>
+                    
+            
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colSpan={6}><h3>Commandes en cours</h3></th>
+                            </tr>
+                        </thead>
+                        <thead>
+                            <tr>
+                              <th>n° Cmde</th>
+                              <th>Statut</th>
+                              <th>Date (Livraison, Arrivée, Déstockage)</th>
+                              <th>Condition</th>
+                              <th>Client</th>
+                              <th>Véhicule(s)</th>
+                              <th>Accessoire(s)</th>
+                              <th>Dernière action, note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>12</td>
+                              <td>Livraison programmée</td>
+                              <td>02/02/2026</td>
+                              <td>---</td>
+                              <td>ENM</td>
+                              <td>5 Peugeot 208</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>46</td>
+                              <td>Livraison programmée</td>
+                              <td>03/02/2026</td>
+                              <td>---</td>
+                              <td>ARS Aquitaine</td>
+                              <td>1 Peugeot 2008</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>15</td>
+                              <td>Livraison programmée</td>
+                              <td>03/02/2026</td>
+                              <td>---</td>
+                              <td>Domofrance</td>
+                              <td>3 Peugeot 308</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>16</td>
+                              <td>Livraison programmée</td>
+                              <td>15/02/2026</td>
+                              <td>---</td>
+                              <td>ENM</td>
+                              <td>3 Peugeot 3008</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>15</td>
+                              <td>Livraison programmée</td>
+                              <td>15/02/2026</td>
+                              <td>---</td>
+                              <td>Domofrance</td>
+                              <td>Peugeot 208</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>79</td>
+                              <td>Livraison programmée</td>
+                              <td>15/02/2026</td>
+                              <td>---</td>
+                              <td>Domofrance</td>
+                              <td>2 Peugeot 3008</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>45</td>
+                              <td>Déstockage en cours</td>
+                              <td>Arrivée prévue le 02/03/2026</td>
+                              <td>---</td>
+                              <td>Client</td>
+                              <td>Véhicule(s)</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>456</td>
+                              <td>Déstockage en cours</td>
+                              <td>Arrivée prévue le 03/03/2026</td>
+                              <td>---</td>
+                              <td>ENM</td>
+                              <td>5 Peugeot 208</td>
+                              <td><input type="checkbox" /></td>
+                            </tr>
+                            <tr>
+                              <td>18</td>
+                              <td>Déstockage en cours</td>
+                              <td>Arrivée prévue le 25/03/2026</td>
+                              <td>---</td>
+                              <td>ARS Aquitaine</td>
+                              <td>1 Peugeot 408</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>43</td>
+                              <td>Déstockage en cours</td>
+                              <td>Arrivée prévue le 25/03/2026</td>
+                              <td>---</td>
+                              <td>Domofrance</td>
+                              <td>3 Citroen C4</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>34</td>
+                              <td>Déstockage en cours</td>
+                              <td>Arrivée prévue le 18/04/2026</td>
+                              <td>---</td>
+                              <td>ENM</td>
+                              <td>5 Peugeot 2008</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>91</td>
+                              <td>Déstockage en attente</td>
+                              <td>À déstocker le 18/04/2026</td>
+                              <td>---</td>
+                              <td>ENM</td>
+                              <td>5 Peugeot 2008</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>12</td>
+                              <td>Déstockage en attente</td>
+                              <td>---</td>
+                              <td>Déstocker dès réception de la carte grise</td>
+                              <td>ENM</td>
+                              <td>5 Peugeot 2008</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>48</td>
+                              <td>Déstockage en attente</td>
+                              <td>---</td>
+                              <td>Déstocker quand accord du client</td>
+                              <td>ENM</td>
+                              <td>5 Peugeot 2008</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>42</td>
+                              <td>Déstockage en attente</td>
+                              <td>---</td>
+                              <td>Déstocker quand dossier complété</td>
+                              <td>ENM</td>
+                              <td>5 Peugeot 2008</td>
+                              <td><input type="checkbox" /></td>
+                              <td>---</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+
+            {/* VÉHICULES NON LIVRABLES */}
+            <section id="standby">        
+                <h2>Commandes en attente</h2>
+                <section>
+                    <table>
+                        <thead>
+                            <tr>
+                              <th colSpan={6}><h3>Rappels constructeurs</h3></th>
+                            </tr>
+                        </thead>
+                        <thead>
+                            <tr>
+                                <th>n° Cmde</th>
+                                <th>n° campagne</th>
+                                <th>Statut</th>
+                                <th>Client</th>
+                                <th>Véhicule(s)</th>
+                                <th>Dernière action, note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>45</td>
+                              <td>2023-AB12</td>
+                              <td>En atelier</td>
+                              <td>ENM</td>
+                              <td>5 Peugeot 208</td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>13</td>
+                              <td>2022-CD34</td>
+                              <td>En atelier</td>
+                              <td>ARS Aquitaine</td>
+                              <td>1 Peugeot 2008</td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>51</td>
+                              <td>2023-EF56</td>
+                              <td>En atelier</td>
+                              <td>Domofrance</td>
+                              <td>3 Peugeot 308</td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>61</td>
+                              <td>2023-GH78</td>
+                              <td>Dossier demandé</td>
+                              <td>ENM</td>
+                              <td>3 Peugeot 3008</td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>49</td>
+                              <td>2023-IJ90</td>
+                              <td>Dossier demandé</td>
+                              <td>Domofrance</td>
+                              <td>Peugeot 208</td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>11</td>
+                              <td>2022-KL12</td>
+                              <td>Dossier demandé</td>
+                              <td>Domofrance</td>
+                              <td>2 Peugeot 3008</td>
+                              <td>---</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <table>
+                        <thead>
+                            <tr>
+                              <th colSpan={6}><h3>Réserves carrosseries</h3></th>
+                            </tr>
+                        </thead>
+                        <thead>
+                            <tr>
+                              <th>n° Cmde</th>
+                              <th>Statut</th>
+                              <th>Client</th>
+                              <th>Véhicule(s)</th>
+                              <th>Dernière action, note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>16</td>
+                              <td>En atelier</td>
+                              <td>ENM</td>
+                              <td>5 Peugeot 208</td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>15</td>
+                              <td>En atelier</td>
+                              <td>ARS Aquitaine</td>
+                              <td>1 Peugeot 2008</td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>27</td>
+                              <td>En atelier</td>
+                              <td>Domofrance</td>
+                              <td>3 Peugeot 308</td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>38</td>
+                              <td>Dossier demandé</td>
+                              <td>ENM</td>
+                              <td>3 Peugeot 3008</td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>29</td>
+                              <td>Dossier demandé</td>
+                              <td>Domofrance</td>
+                              <td>Peugeot 208</td>
+                              <td>---</td>
+                            </tr>
+                            <tr>
+                              <td>19</td>
+                              <td>Dossier demandé</td>
+                              <td>Domofrance</td>
+                              <td>2 Peugeot 3008</td>
+                              <td>---</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
         </section>
       </main>
     </div>
