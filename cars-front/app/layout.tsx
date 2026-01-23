@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Car Deliveries Manager",
+  title: "Car Delivery Manager",
   description: "A car delivery manager built with Next.js",
 };
 
