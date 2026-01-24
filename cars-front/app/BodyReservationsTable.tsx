@@ -1,4 +1,4 @@
-import BodyReservationsTableItem from "./BodyReservationsTableItem";
+import BodyReservationTableItem from "./BodyReservationTableItem";
 
 export default function BodyReservationsTable(){
     return  <table className="border-table-lines border-2 rounded-md p-4 mt-8">
@@ -17,11 +17,11 @@ export default function BodyReservationsTable(){
                     </tr>
                 </thead>
                 <tbody>
-                    <BodyReservationsTableItem/>
-                    <BodyReservationsTableItem/>
-                    <BodyReservationsTableItem/>
-                    <BodyReservationsTableItem/>
-                    <BodyReservationsTableItem/>
+                    <BodyReservationTableItem/>
+                    <BodyReservationTableItem/>
+                    <BodyReservationTableItem/>
+                    <BodyReservationTableItem/>
+                    <BodyReservationTableItem/>
                 </tbody>
             </table>;
 }

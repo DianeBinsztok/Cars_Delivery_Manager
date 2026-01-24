@@ -6,6 +6,7 @@ import RecallsTable from "./RecallsTable";
 import BodyReservationsTable from "./BodyReservationsTable";
 
 
+
 export default function Home() {
 
   return (
@@ -16,6 +17,7 @@ export default function Home() {
             <h2 className="text-2xl font-medium">Livraisons du jour</h2>
             <CalendarTable/>
         </section>
+
         {/* II - VEHICULES */}
         <section id="orders" className="w-full ">
           <h2 className="text-2xl font-medium">Commandes</h2>
