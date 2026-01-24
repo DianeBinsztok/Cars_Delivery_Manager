@@ -2,6 +2,11 @@ import VehicleTableItem from "./VehicleTableItem";
 
 export default function VehiclesTable(){
     return  <table className="border-table-lines border-2 rounded-md p-4 mt-8">
+                <thead>
+                    <tr>
+                        <th colSpan={8}><h3>Véhicules</h3></th>
+                    </tr>
+                </thead>
               <thead>
                   <tr>
                     <th>Véhicule(s)</th>

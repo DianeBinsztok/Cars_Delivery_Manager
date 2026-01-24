@@ -1,4 +1,4 @@
-import VehiclesTable from "./VehiclesTable"
+import VehiclesTable from "./Vehicles/VehiclesTable"
 
 /* MODALE : DÉTAIL D'UNE COMMANDE */
 export default function Popup() {

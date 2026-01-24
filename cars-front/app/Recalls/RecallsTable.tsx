@@ -1,7 +1,7 @@
 import RecallTableItem from "./RecallTableItem";
 
 export default function RecallsTable() {
-    return  <table className="w-full border-table-lines border-2 rounded-md p-4 mt-8">
+   return  <table className="w-full border-table-lines border-2 rounded-md p-4 mt-8">
                 <thead>
                     <tr>
                         <th colSpan={8}><h3>Rappels constructeurs</h3></th>

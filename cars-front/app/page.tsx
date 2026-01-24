@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Popup from "./Popup";
 import CalendarTable from "./CalendarTable";
-import OrdersTable from "./OrdersTable";
-import RecallsTable from "./RecallsTable";
-import BodyReservationsTable from "./BodyReservationsTable";
-
+import OrdersTable from "./Orders/OrdersTable";
+import RecallsTable from "./Recalls/RecallsTable";
+import BodyReservationsTable from "./BodyReservations/BodyReservationsTable";
 
 
 export default function Home() {
@@ -17,8 +16,7 @@ export default function Home() {
             <h2 className="text-2xl font-medium">Livraisons du jour</h2>
             <CalendarTable/>
         </section>
-
-        {/* II - VEHICULES */}
+        {/* II - COMMANDES */}
         <section id="orders" className="w-full ">
           <h2 className="text-2xl font-medium">Commandes</h2>
           <div className="flex">
