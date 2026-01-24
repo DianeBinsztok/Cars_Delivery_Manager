@@ -4,6 +4,7 @@ import CalendarTable from "./CalendarTable";
 import OrdersTable from "./Orders/OrdersTable";
 import RecallsTable from "./Recalls/RecallsTable";
 import BodyReservationsTable from "./BodyReservations/BodyReservationsTable";
+import Table from "./Table";
 
 
 export default function Home() {
@@ -16,6 +17,8 @@ export default function Home() {
             <h2 className="text-2xl font-medium">Livraisons du jour</h2>
             <CalendarTable/>
         </section>
+        {/* TEST */}
+        <Table title="test" columns={["col1", "col2", "col3"]} rows={["row1", "row2", "row3"]}/>
         {/* II - COMMANDES */}
         <section id="orders" className="w-full ">
           <h2 className="text-2xl font-medium">Commandes</h2>
