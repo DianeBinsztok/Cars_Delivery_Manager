@@ -18,7 +18,15 @@ export default function Home() {
             <CalendarTable/>
         </section>
         {/* TEST */}
-        <Table title="test" columns={["col1", "col2", "col3"]} rows={["row1", "row2", "row3"]}/>
+        <Table title="Véhicules"
+        columns={["VIN", "Statut", "Date", "Condition", "Accessoires", "Marque", "Modèle", "Couleur", "Immatriculation"]} 
+        rows={[
+          {"vin": "VF7 SBHHZ1AW554823", "status": "Sur place", "date":"---", "condition": "---", "accessories":"", "brand": "Renault", "model": "Clio", "color": "Blanc", "plate": "AB-123-CD"},
+          {"vin": "VF7 SBHHZ1AW554823", "status": "Déstockage en cours", "date":"03/12/2026", "condition": "---", "accessories":"", "brand": "Peugeot", "model": "308", "color": "Bleu", "plate": "AB-173-CD"},
+          {"vin": "VF7 SBHHZ1AW554823", "status": "Déstockage en cours", "date":"03/12/2026", "condition": "---", "accessories":"Oui", "brand": "Citroën", "model": "C3", "color": "Bleu", "plate": "AB-123-CD"},
+          {"vin": "VF7 SBHHZ1AW554823", "status": "En attente de déstockage", "date":"10/03/2026", "condition": "---", "accessories":"", "brand": "Renault", "model":"Clio","color":"Gris","plate":"AB-153-CD"},
+          {"vin":	"VF7 SBHHZ1AW554823", "status": "En attente de déstockage", "date":"", "condition": "Appel du gestionnaire", "accessories":"", "brand": "Peugeot", "model":"208","color":"Jaune","plate":"AB-753-CD"}
+          ]}/>
         {/* II - COMMANDES */}
         <section id="orders" className="w-full ">
           <h2 className="text-2xl font-medium">Commandes</h2>

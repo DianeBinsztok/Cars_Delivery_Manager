@@ -1,25 +1,6 @@
-import VehicleTableItem from "./VehicleTableItem";
+import Table from "../Table";
+import Row from "../Table";
 
-export default function VehiclesTable(){
-    return  <table className="border-table-lines border-2 rounded-md p-4 mt-8">
-                <thead>
-                    <tr>
-                        <th colSpan={8}><h3>Véhicules</h3></th>
-                    </tr>
-                </thead>
-              <thead>
-                  <tr>
-                    <th>Véhicule(s)</th>
-                    <th>Statut</th>
-                    <th>Date (Livraison, Arrivée, Déstockage)</th>
-                    <th>Condition</th>
-                    <th>Accessoire(s)</th>
-                  </tr>
-              </thead>
-              <tbody>
-                <VehicleTableItem/>
-                <VehicleTableItem/>
-                <VehicleTableItem/>
-              </tbody>
-          </table>;
+export default function VehiclesTable(props:{title:string, columns:string[], rows:{vin:string, status:string, date:string, condition:string, accessories:boolean, brand:string, model:string, color:string, plate:string}[]}) {
+
 }

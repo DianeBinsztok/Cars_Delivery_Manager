@@ -1,4 +1,9 @@
-export default function Table(props: {title: string, columns: string[], rows:string[]}) {
+/* */
+function Row(props: {cellValue: any}) {
+    return <td>{props.cellValue}</td>;
+}
+
+export default function Table(props: {title: string, columns: string[], rows:{}[]}) {
     return <table className="border-table-lines border-2 rounded-md p-4 mt-8">
             <thead>
                 <tr>
@@ -14,7 +19,11 @@ export default function Table(props: {title: string, columns: string[], rows:str
             </thead>
             <tbody>
                 {props.rows.map((row, rowIndex) => (
-                    <th key={rowIndex}>{row}</th>
+                    <tr key={rowIndex}>
+                        {Object.values(row).map((cellValue, cellIndex) => (
+                            <Row key={cellIndex} cellValue={cellValue} />
+                        ))}
+                    </tr>
                 ))}
             </tbody>
         </table>;
