@@ -17,16 +17,6 @@ export default function Home() {
             <h2 className="text-2xl font-medium">Livraisons du jour</h2>
             <CalendarTable/>
         </section>
-        {/* TEST */}
-        <Table title="Véhicules"
-        columns={["VIN", "Statut", "Date", "Condition", "Accessoires", "Marque", "Modèle", "Couleur", "Immatriculation"]} 
-        rows={[
-          {"vin": "VF7 SBHHZ1AW554823", "status": "Sur place", "date":"---", "condition": "---", "accessories":"", "brand": "Renault", "model": "Clio", "color": "Blanc", "plate": "AB-123-CD"},
-          {"vin": "VF7 SBHHZ1AW554823", "status": "Déstockage en cours", "date":"03/12/2026", "condition": "---", "accessories":"", "brand": "Peugeot", "model": "308", "color": "Bleu", "plate": "AB-173-CD"},
-          {"vin": "VF7 SBHHZ1AW554823", "status": "Déstockage en cours", "date":"03/12/2026", "condition": "---", "accessories":"Oui", "brand": "Citroën", "model": "C3", "color": "Bleu", "plate": "AB-123-CD"},
-          {"vin": "VF7 SBHHZ1AW554823", "status": "En attente de déstockage", "date":"10/03/2026", "condition": "---", "accessories":"", "brand": "Renault", "model":"Clio","color":"Gris","plate":"AB-153-CD"},
-          {"vin":	"VF7 SBHHZ1AW554823", "status": "En attente de déstockage", "date":"", "condition": "Appel du gestionnaire", "accessories":"", "brand": "Peugeot", "model":"208","color":"Jaune","plate":"AB-753-CD"}
-          ]}/>
         {/* II - COMMANDES */}
         <section id="orders" className="w-full ">
           <h2 className="text-2xl font-medium">Commandes</h2>
@@ -34,17 +24,39 @@ export default function Home() {
             {/* VÉHICULES LIVRABLES */}
             <section id="ongoing"> 
                 <section>
-                    <OrdersTable/>
+                  <Table title="Commandes"
+                    columns={["N°", "Statut", "Date (Livraison, Arrivée, Déstockage)", "Condition", "Client", "Véhicule(s)", "Accessoire(s)", "Dernière action, note"]} 
+                    rows={[
+                      {"N°": "1258", "Statut": "En cours", "Date": "10/03/2026", "Condition": "Appel du gestionnaire", "Client": "Société ENM", "Véhicule(s)": "2", "Accessoire(s)": "0", "Dernière action, note": "Rappel le 05/03"},
+                      {"N°": "1259", "Statut": "En cours", "Date": "12/03/2026", "Condition": "Livraison prévue", "Client": "Société ABC", "Véhicule(s)": "1", "Accessoire(s)": "2", "Dernière action, note": "Note ajoutée"},
+                      {"N°": "1260", "Statut": "En cours", "Date": "15/03/2026", "Condition": "En attente de déstockage", "Client": "Société XYZ", "Véhicule(s)": 3, 	"Accessoire(s)": 1, 	"Dernière action, note": 	"Contacté le 01/03"},
+                      {"N°": 	"1261", 	"Statut":"En cours","Date":"18/03/2026","Condition":"Préparation en cours","Client":"Société LMN","Véhicule(s)":"2","Accessoire(s)":"0","Dernière action, note":"En attente de confirmation"},
+                      {"N°":"1262","Statut":"En cours","Date":"20/03/2026","Condition":"Livraison prévue","Client":"Société DEF","Véhicule(s)":"1","Accessoire(s)":"3","Dernière action, note":"Note ajoutée"}
+                    ]}/>
                 </section>
             </section>
 
             {/* VÉHICULES NON LIVRABLES */}
-            <section id="standby" className="ml-10">        
+            <section id="standby" className="ml-10">  
+              {/* Campagnes de rappel */}      
                 <section>
-                    <RecallsTable/>
+                    <Table title="Campagnes de rappel"
+                    columns={["N°", "Campagne", "Statut", "Date de fin"]} 
+                    rows={[
+                      {"N°": "R001", "Campagne": "Rappel 2026", "Statut": "En cours", "Date de fin": "15/03/2026"},
+                      {"N°": "R002", "Campagne": "Rappel 2027", "Statut": "En attente", "Date de fin": "20/03/2027"},
+                      {"N°": "R003", "Campagne": "Rappel 2028", "Statut": "Terminé", "Date de fin": "10/03/2028"}
+                    ]}/>
                 </section>
+              {/* Réserves carrosserie */}
                 <section>
-                  <BodyReservationsTable/>
+                  <Table title="Réserves carrosserie"
+                    columns={["N°", "Statut"]} 
+                    rows={[
+                      {"N°": "R001", "Statut": "En cours"},
+                      {"N°": "R002", "Statut": "En attente"},
+                      {"N°": "R003", "Statut": "Terminé"}
+                    ]}/>
                 </section>
             </section>
           </div>

@@ -1,5 +1,4 @@
 import Table from "./Table";
-import VehiclesTable from "./Vehicles/VehiclesTable"
 
 /* MODALE : DÉTAIL D'UNE COMMANDE */
 export default function Popup() {

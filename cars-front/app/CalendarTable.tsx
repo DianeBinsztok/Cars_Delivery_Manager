@@ -1,4 +1,4 @@
-export default function CalendarTable(){
+export default function CalendarTable() {
     return  <table className="w-full border-table-lines border-2 rounded-md p-4 mt-8">
                 <thead className="border-b-1-background">
                     <tr>
