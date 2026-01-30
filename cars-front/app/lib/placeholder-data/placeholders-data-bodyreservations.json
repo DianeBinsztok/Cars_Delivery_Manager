@@ -1,0 +1,27 @@
+[
+    {
+        "reservationId": "BR001",
+        "vehiculeVIN": "VF7SBHMZ0EW554823",
+        "status": "Ongoing"
+    },
+    {
+        "reservationId": "BR002",
+        "vehiculeVIN": "VF7SBHMZ0EW554824",
+        "status": "Completed"
+    },
+    {
+        "reservationId": "BR003",
+        "vehiculeVIN": "VF7SBHMZ0EW554825",
+        "status": "Pending"
+    },
+    {
+        "reservationId": "BR004",
+        "vehiculeVIN": "VF7SBHMZ0EW554826",
+        "status": "Ongoing"
+    },
+    {
+        "reservationId": "BR005",
+        "vehiculeVIN": "VF7SBHMZ0EW554827",
+        "status": "Completed"
+    }
+]

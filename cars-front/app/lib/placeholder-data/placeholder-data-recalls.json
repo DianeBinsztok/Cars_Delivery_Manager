@@ -1,0 +1,32 @@
+[
+    {
+        "recallId": "RCL-2023-001",
+        "status": "Ongoing",
+        "description": "Airbag inflator may rupture during deployment."
+    },
+    {
+        "recallId": "RCL-2023-002",
+        "status": "Completed",
+        "description": "Fuel pump may fail, causing engine stalling."
+    },
+    {
+        "recallId": "RCL-2024-001",
+        "status": "Ongoing",
+        "description": "Brake fluid leak may lead to reduced braking performance."
+    },
+    {
+        "recallId": "RCL-2024-002",
+        "status": "Completed",
+        "description": "Steering column may become loose over time."
+    },
+    {
+        "recallId": "RCL-2024-003",
+        "status": "Ongoing",
+        "description": "Electrical wiring may short-circuit, causing fire risk."
+    },
+    {
+        "recallId": "RCL-2024-004",
+        "status": "Completed",
+        "description": "Seatbelt retractors may fail to lock properly."
+    }
+]

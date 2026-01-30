@@ -1,0 +1,46 @@
+[
+  {
+    "vin": "VF7SBHMZ0EW554823",
+    "location": "Le Bouscat",
+    "make": "Peugeot",
+    "model": "308",
+    "color": "Blue",
+    "plate_nbr": "AB-123-CD", 
+    "mileage":"8500"
+  },
+    {
+    "vin": "VF7SBHMZ0EW554823",
+    "location": "Toulouse",
+    "make": "Citroen",
+    "model": "C3",
+    "color": "White",
+    "plate_nbr": "AC-456-CD", 
+    "mileage":"15000"
+  },
+  {
+    "vin": "VF7SBHMZ0EW554823",
+    "location": "In transit",
+    "make": "Renault",
+    "model": "Megane",
+    "color": "Grey",
+    "plate_nbr": "AB-123-CD", 
+    "mileage":"1500"
+  },
+    {
+    "vin": "VF7SBHMZ0EW554823",
+    "location": "In transit",
+    "make": "Toyota",
+    "model": "Corolla",
+    "color": "Blue",
+    "plate_nbr": "OK-423-CD", 
+    "mileage":"8000"
+  },
+  {
+    "vin": "VF7SBHMZ0EW554823",
+    "location": "Marseilles",
+    "make": "Peugeot",
+    "model": "3008",
+    "color": "White",
+    "plate_nbr": "mB-7533-CD", 
+    "mileage":"12000"
+  }]

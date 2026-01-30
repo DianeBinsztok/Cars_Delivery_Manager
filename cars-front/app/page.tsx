@@ -1,10 +1,22 @@
 import Image from "next/image";
-import Popup from "./Popup";
-import CalendarTable from "./CalendarTable";
-import OrdersTable from "./Orders/OrdersTable";
-import RecallsTable from "./Recalls/RecallsTable";
-import BodyReservationsTable from "./BodyReservations/BodyReservationsTable";
-import Table from "./Table";
+import Popup from "./ui/components//Popup";
+import CalendarTable from "./ui/components/CalendarTable";
+import Table from "./ui/components/Table";
+
+/* IMPORTATION DES DONNÉES DE COMMANDES, VÉHICULES, RAPPELS ET RÉSERVES CARROSSERIE */
+/* I - LES COMMANDES */
+import orders from "./lib/placeholder-data/placeholder-data-orders.json";
+/* Récupérer les propriété de commandes, sans la propriété "Vehicles" */
+const ordersWithoutVehicles = orders.map(({vehicles, ...rest}) => rest);
+const ordersProps = Object.keys(ordersWithoutVehicles[0]);
+
+/* II - LES CAMPAGNES DE RAPPEL */
+import recalls from "./lib/placeholder-data/placeholder-data-recalls.json";
+const recallsProps = Object.keys(recalls[0]);
+
+/* IiI - LES RÉSERVES EN CARROSSERIE */
+import bodyReservations from "./lib/placeholder-data/placeholders-data-bodyreservations.json";
+const bodyReservationsProps = Object.keys(bodyReservations[0]);
 
 
 export default function Home() {
@@ -25,14 +37,8 @@ export default function Home() {
             <section id="ongoing"> 
                 <section>
                   <Table title="Commandes"
-                    columns={["N°", "Statut", "Date (Livraison, Arrivée, Déstockage)", "Condition", "Client", "Véhicule(s)", "Accessoire(s)", "Dernière action, note"]} 
-                    rows={[
-                      {"N°": "1258", "Statut": "En cours", "Date": "10/03/2026", "Condition": "Appel du gestionnaire", "Client": "Société ENM", "Véhicule(s)": "2", "Accessoire(s)": "0", "Dernière action, note": "Rappel le 05/03"},
-                      {"N°": "1259", "Statut": "En cours", "Date": "12/03/2026", "Condition": "Livraison prévue", "Client": "Société ABC", "Véhicule(s)": "1", "Accessoire(s)": "2", "Dernière action, note": "Note ajoutée"},
-                      {"N°": "1260", "Statut": "En cours", "Date": "15/03/2026", "Condition": "En attente de déstockage", "Client": "Société XYZ", "Véhicule(s)": 3, 	"Accessoire(s)": 1, 	"Dernière action, note": 	"Contacté le 01/03"},
-                      {"N°": 	"1261", 	"Statut":"En cours","Date":"18/03/2026","Condition":"Préparation en cours","Client":"Société LMN","Véhicule(s)":"2","Accessoire(s)":"0","Dernière action, note":"En attente de confirmation"},
-                      {"N°":"1262","Statut":"En cours","Date":"20/03/2026","Condition":"Livraison prévue","Client":"Société DEF","Véhicule(s)":"1","Accessoire(s)":"3","Dernière action, note":"Note ajoutée"}
-                    ]}/>
+                    columns={ordersProps.map((prop) => prop.charAt(0).toUpperCase() + prop.slice(1))} 
+                    rows={ordersWithoutVehicles.map((order:{}) => Object.values(order))}/>
                 </section>
             </section>
 
@@ -41,22 +47,14 @@ export default function Home() {
               {/* Campagnes de rappel */}      
                 <section>
                     <Table title="Campagnes de rappel"
-                    columns={["N°", "Campagne", "Statut", "Date de fin"]} 
-                    rows={[
-                      {"N°": "R001", "Campagne": "Rappel 2026", "Statut": "En cours", "Date de fin": "15/03/2026"},
-                      {"N°": "R002", "Campagne": "Rappel 2027", "Statut": "En attente", "Date de fin": "20/03/2027"},
-                      {"N°": "R003", "Campagne": "Rappel 2028", "Statut": "Terminé", "Date de fin": "10/03/2028"}
-                    ]}/>
+                    columns={recallsProps.map((prop) => prop.charAt(0).toUpperCase() + prop.slice(1))} 
+                    rows={recalls.map((recall:{}) => Object.values(recall))}/>
                 </section>
               {/* Réserves carrosserie */}
                 <section>
                   <Table title="Réserves carrosserie"
-                    columns={["N°", "Statut"]} 
-                    rows={[
-                      {"N°": "R001", "Statut": "En cours"},
-                      {"N°": "R002", "Statut": "En attente"},
-                      {"N°": "R003", "Statut": "Terminé"}
-                    ]}/>
+                    columns={bodyReservationsProps.map((prop) => prop.charAt(0).toUpperCase() + prop.slice(1))} 
+                    rows={bodyReservations.map((reservation:{}) => Object.values(reservation))}/>
                 </section>
             </section>
           </div>

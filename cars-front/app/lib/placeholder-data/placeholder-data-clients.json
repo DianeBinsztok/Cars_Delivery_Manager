@@ -1,0 +1,146 @@
+[
+    {
+        "id": "client-1",
+        "name": "Acme Corporation",
+        "industry": "Manufacturing",
+        "contacts": [
+            {
+                "name": "John Doe",
+                "email": "john.doe@acme.com",
+                "phone": "555-1234"
+            },
+            {
+                "name": "Jane Smith",
+                "email": "jane.smith@acme.com",
+                "phone": "555-5678"
+            }
+        ],
+        "vehicles": [
+            {
+                "vin": "VF7SBHMZ0EW554823",
+                "location": "Le Bouscat",
+                "make": "Peugeot",
+                "model": "3008",
+                "color": "White"
+            },
+            {
+                "vin": "VF7SBHMZ0EW554824",
+                "location": "Toulouse",
+                "make": "Citroen",
+                "model": "C3",
+                "color": "Black"
+            }
+        ],
+        "orders": [
+            {
+                "orderId": "ORD123456",
+                "status": "Delivered"
+            },
+            {
+                "orderId": "ORD123457",
+                "status": "In Transit"      
+            }
+        ]
+    },  
+    {
+        "id": "client-2",
+        "name": "Global Enterprises",
+        "industry": "Retail",
+        "contacts": [
+            {
+                "name": "Alice Johnson",
+                "email": "alice.johnson@global.com",
+                "phone": "555-9876"
+            }
+        ],
+        "vehicles": [
+            {
+                "vin": "VF7SBHMZ0EW554825",
+                "location": "Marseilles",
+                "make": "Renault",
+                "model": "Clio",
+                "color": "Red"
+            }
+        ],
+        "orders": [
+            {
+                "orderId": "ORD123458",
+                "status": "Processing"
+            }
+        ]
+    },  
+    {
+        "id": "client-3",
+        "name": "Tech Solutions",
+        "industry": "Technology",
+        "contacts": [
+            {
+                "name": "Bob Brown",
+                "email": "bob.brown@tech.com",
+                "phone": "555-4321"
+            }
+        ], 
+        "vehicles": [
+            {
+                "vin": "VF7SBHMZ0EW554826",
+                "location": "Lille",
+                "make": "Toyota",
+                "model": "Yaris",
+                "color": "Blue"
+            },
+            {
+                "vin": "VF7SBHMZ0EW554827",
+                "location": "In transit",
+                "make": "Peugeot",
+                "model": "208",
+                "color": "Green"
+            }
+        ],
+        "orders": [
+            {
+                "orderId": "ORD123459",
+                "status": "Cancelled"
+            },
+            {
+                "orderId": "ORD123460",
+                "status": "Delivered"
+            }
+        ]
+    },  
+    {
+        "id": "client-4",
+        "name": "Innovatech",
+        "industry": "Innovation",
+        "contacts": [
+            {
+                "name": "Charlie Davis",
+                "email": "charlie.davis@innovatech.com",
+                "phone": "555-8765"
+            },
+            {
+                "name": "Diana Evans",
+                "email": "diana.evans@innovatech.com",
+                "phone": "555-2468"
+            }
+        ],
+        "vehicles": [
+            {
+                "vin": "VF7SBHMZ0EW554828",
+                "location": "Nantes",
+                "make": "Ford",
+                "model": "Focus",
+                "color": "Silver"
+            }
+        ],
+        "orders": [
+            {
+                "orderId": "ORD123461",
+                "status": "In Transit"
+            },
+            {
+                "orderId": "ORD123462",
+                "status": "Processing"
+            }
+        ]
+    }
+]
